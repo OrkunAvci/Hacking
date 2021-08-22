@@ -16,7 +16,7 @@ PORT   STATE SERVICE VERSION
 
 ---
 
-##gobuster -w ./../SecLists-2021.2/Discovery/Web-Content/quickhits.txt -u 10.10.10.28 -q -r dir
+##  gobuster -w ./../SecLists-2021.2/Discovery/Web-Content/quickhits.txt -u 10.10.10.28 -q -r dir
 
 ```
 //index.phps (Status: 403)
