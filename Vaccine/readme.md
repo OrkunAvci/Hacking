@@ -220,7 +220,11 @@ And the password is the one we just found.
 
 ## Apparently the machine is unstable and is dropping sessions.
 
-I had the same problem and the only viable solution is to reset the machine. Which is not a solution for me because the maimum number of resets for tha machine for the day ahs been reached. It should put things into perspective. Sad thing for a beginner machine but I have found a python script for SQL Injections.
+I had the same problem and the only viable solution is to reset the machine.
+
+Which is not a solution for me because the maimum number of resets for the machine for the day has been reached.
+
+Sad thing for a beginner machine but I have found a python script for SQL Injections.
 
 Script is is sql_inj.py
 
