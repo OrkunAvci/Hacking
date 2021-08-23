@@ -50,6 +50,7 @@ PORT     STATE SERVICE    VERSION
 ```
 
 Username: ARCHETYPE
+
 Pass: M3g4c0rp123
 
 ---
@@ -121,11 +122,10 @@ And we have a privileged remote shell.
 
 ## Inside users
 
-```
+
 user.txt:
-    3e7b102e78218e935bf3f4951fec21a3
-```
-```
+    ~~3e7b102e78218e935bf3f4951fec21a3~~
+
 root.txt:
-    b91ccec3305e98240082d4474b848528
-```
+    ~~b91ccec3305e98240082d4474b848528~~
+
