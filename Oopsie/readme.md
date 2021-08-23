@@ -31,6 +31,7 @@ PORT   STATE SERVICE VERSION
 ++ [Exploit-db](https://www.exploit-db.com/exploits/45233)
 
 Python code is in `exploit_ssh_7_6.py`.
+
 Code seems to be broken. Even after fixing parantesis problems.
 
 ---
@@ -38,10 +39,13 @@ Code seems to be broken. Even after fixing parantesis problems.
 ## Used Burp to examine the site.
 
 Packages reveal `10.10.10.28/cdn-cgi/login`.
+
 Login site has Username and Password requirements.
 
 Simply by tring:
+
 Username: admin
+
 Pass: MEGACORP_4dm1n!!
 
 ---
@@ -67,6 +71,7 @@ Uploads page is locked behind super admin rights.
 ## Attacking with Burp repeater
 
 `id=1` variable is exposed through the URL. We can enumerate this.
+
 After using Burp to attack, the id for super admin gets exposed.
 
 Super Admin ID: 30
@@ -82,6 +87,7 @@ Access ID	Name	Email
 ```
 
 Super Admin Access ID: 86575
+
 Role: super admin
 
 ---
@@ -89,8 +95,11 @@ Role: super admin
 ## Get reverse shell inside the system
 
 Reverse shell with PHP from ++ [here.](https://github.com/pentestmonkey/php-reverse-shell)
+
 Saved in .reverse-shell.php
+
 Needs IP and Port supplied.
+
 We upload this file and modify the payload again.
 
 ---
@@ -125,6 +134,7 @@ $conn = mysqli_connect('localhost','robert','M3g4C0rpUs3r!','garage');
 ```
 
 Username: robert
+
 Pass: M3g4C0rpUs3r!
 
 Using `id robert` reveals:
