@@ -106,7 +106,7 @@ Password: 741852963
 
 ---
 
-## Zip includes a index.php
+## Zip includes an index.php
 
 The very first thing:
 ```
