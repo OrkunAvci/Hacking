@@ -4,22 +4,26 @@
 
 ## nmap -sS -sC -sV 10.10.10.27
 
+```
 PORT     STATE SERVICE    VERSION
 135/tcp  open  tcpwrapped
 139/tcp  open  tcpwrapped
 445/tcp  open  tcpwrapped Windows Server 2019 Standard 17763 tcpwrapped
 1433/tcp open  ms-sql-s   Microsoft SQL Server 2017 14.00.1000.00; RTM
+```
 
 ---
 
 ## smbclient -N -L 10.10.10.27
 
+```
 	Sharename       Type      Comment
 	---------       ----      -------
 	ADMIN$          Disk      Remote Admin
 	backups         Disk      
 	C$              Disk      Default share
 	IPC$            IPC       Remote IPC
+```
 
 ---
 
