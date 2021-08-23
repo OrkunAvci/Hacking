@@ -15,7 +15,9 @@
 ## Found DDoS on vs-ftpd on port 21.
 
 Script is in DDoS_on_vsftpd.py
+
 vsftpd = "vsftpd, (or very secure FTP daemon),[1] is an FTP server for Unix-like systems, including Linux. It is the default FTP server in the Ubuntu, CentOS, Fedora, NimbleX, Slackware and RHEL Linux distributions. It is licensed under the GNU General Public License. It supports IPv6, TLS and FTPS (explicit since 2.0.0 and implicit since 2.1.0). "
+
 ++ [Wiki Source](https://en.wikipedia.org/wiki/Vsftpd)
 
 ++ [Exploit](https://www.exploit-db.com/exploits/49719)
@@ -48,6 +50,7 @@ Common passwords don't work.
 ## HTTP has vulns
 
 ++ [CVE-2020-1934](https://nvd.nist.gov/vuln/detail/CVE-2020-1934)
+
 ++ [CVE-2020-1927](https://nvd.nist.gov/vuln/detail/CVE-2020-1927)
 
 ```
@@ -61,6 +64,7 @@ Common passwords don't work.
 ## Walkthrough gives the credentials for ftp.
 
 Username: ftpuser
+
 Password: mc@F1l3ZilL4
 
 This probably needs to be enumarated.
@@ -93,7 +97,9 @@ ftp> exit
 ## The zip is password protected but can be cracked with JohntheRipper
 
 Hashed the zip for john.
+
 I used the website but there is a script inside official repo. Probably also in the program files itself. Might need to be compiled.
+
 Gave hash to john with the wordlist from Seclist.
 
 Password: 741852963
@@ -116,6 +122,7 @@ session_start();
 ```
 
 Username: admin
+
 Password: 2cb42f8734ea607eefed3b70af13bbd3 (hashed)
 
 ---
@@ -123,10 +130,13 @@ Password: 2cb42f8734ea607eefed3b70af13bbd3 (hashed)
 ## Reverse the hash with crackstation
 
 Type: md5
+
 Result: qwerty789
 
 So now,
+
 Username: admin
+
 Password: qwerty789
 
 ---
@@ -134,6 +144,7 @@ Password: qwerty789
 ## We can enter the website and login with the credentials.
 
 Inside there is a search bar.
+
 Stored cookies reveal `PHPSESSID=lj4doc0q3ice032b0mndds6h18`.
 
 ---
