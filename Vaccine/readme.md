@@ -222,7 +222,7 @@ And the password is the one we just found.
 
 I had the same problem and the only viable solution is to reset the machine.
 
-Which is not a solution for me because the maimum number of resets for the machine for the day has been reached.
+Which is not a solution for me because the maximum number of resets for the machine for the day has been reached.
 
 Sad thing for a beginner machine but I have found a python script for SQL Injections.
 
