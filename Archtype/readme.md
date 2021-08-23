@@ -110,6 +110,7 @@ exit
 ```
 
 Username: administrator
+
 Pass: MEGACORP_4dm1n!!
 
 ---
