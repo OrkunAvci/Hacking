@@ -35,7 +35,7 @@ There are some data files for things like comments(?). They don't reveal any sec
 
 ## There is an admin account in the system.
 
-Blog posts seems to be signed uder `admin`.
+Blog posts seems to be signed under `admin`.
 
 But trying to reach `http://10.10.10.29/wordpress/index.php/author/admin/` fails and returns:
 ```
