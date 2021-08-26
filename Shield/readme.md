@@ -177,7 +177,7 @@ I fixed the local host problem with `metasploit` and got the exploit up and runn
 
 I downloaded the `nc.exe` and uploaded it to the target system.
 
-This is the 32 bit version an I renamed it.
+This is the 32 bit version and I renamed it.
 
 Now we can run it on the target system to get a stable shell.
 ```
