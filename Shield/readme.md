@@ -139,6 +139,8 @@ Also `msf >` does not recognize `lcd` command.
 
 ## After some fixes the exploit works.
 
+The default IP adress for local host was wrong and I needed to fix that. Now it works.
+
 We navigate to a writeable folder at `C:/inetpub/wwwroot/wordpress/wp-content/uploads`
 
 We upload `Netcat` on the target machine.
