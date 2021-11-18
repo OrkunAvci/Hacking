@@ -166,7 +166,7 @@ It is owned by root. Let's run it.
 
 ## The reverse shell dropped, but we have credentials.
 
-After `ssh robert@10.10.10.28`, we enter the same pass and we are in. This is officially.
+After `ssh robert@10.10.10.28`, we enter the same pass and we are in. This time officially.
 
 ---
 
